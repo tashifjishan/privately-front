@@ -3,22 +3,26 @@ import { CiVideoOff } from "react-icons/ci";
 import { BsEmojiWink, BsMicMute } from "react-icons/bs";
 import { IoIosAttach } from "react-icons/io";
 import { RiArrowGoBackLine, RiVoiceprintLine } from "react-icons/ri";
+import { Link } from "react-router";
+import { IoSend } from "react-icons/io5";
+import { useState } from "react";
 
 export default function Watch() {
+    const [sendBtnVisible, setSendBtnVisible] = useState(false);
   return (
     <div className="h-screen flex flex-col bg-[#f9fafb] text-gray-800">
       {/* Header */}
       <div className="px-6 py-2 flex items-center justify-between gap-3 border-b border-gray-200 bg-white">
-        <RiArrowGoBackLine size={24} className="text-gray-600" />
+        <Link to={"../"}>
+          <RiArrowGoBackLine size={24} className="text-gray-600" />
+        </Link>
         <div className="flex items-center gap-4">
           <img
             className="w-10 h-10 rounded-full object-cover"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtAOGvsuCigTR-oRCUKfLFQJDcmAOxJfNXgQ&s"
             alt="User"
           />
-         
         </div>
-        
       </div>
 
       {/* Main Content */}
@@ -84,11 +88,22 @@ export default function Watch() {
           <div className="border-t border-gray-200 px-4 py-3 flex items-center gap-3">
             <BsEmojiWink size={22} className="text-gray-500 cursor-pointer" />
             <IoIosAttach size={22} className="text-gray-500 cursor-pointer" />
-            <input
-              className="flex-1 px-3 py-2 border border-gray-200 rounded-full focus:outline-none focus:ring-1 focus:ring-blue-300 text-sm"
-              type="text"
-              placeholder="Say something..."
-            />
+            <div className="flex-1 flex items-center border border-gray-200 rounded-full">
+              <input
+                className="rounded-full px-3 py-2  focus:outline-none focus:outline-none text-sm"
+                type="text"
+                placeholder="Say something..."
+                onChange={(e)=>{
+                    if(e.target.value.trim().length>0){
+                        setSendBtnVisible(true);
+                    }else{
+                        setSendBtnVisible(false);
+                    }
+                }}
+              />
+
+              {sendBtnVisible && <IoSend size={20} />}
+            </div>
             <RiVoiceprintLine
               size={22}
               className="text-gray-500 cursor-pointer"
@@ -97,4 +112,5 @@ export default function Watch() {
         </div>
       </div>
     </div>
-  )}
+  );
+}

@@ -7,6 +7,7 @@ import { HiMagnifyingGlass } from "react-icons/hi2";
 
 import { FaBarsStaggered } from "react-icons/fa6";
 import { useState } from "react";
+import { Link } from "react-router";
 export default function Chats() {
     const [friendsSectionOpen, setFriendsSectionOpen] = useState(false);
   const friends = [
@@ -362,7 +363,7 @@ export default function Chats() {
           <div className="ml-auto flex gap-2 items-center ">
             <CiVideoOn size={30} />
             <CiPhone size={30} />
-            <FaRegPlayCircle size={28} />
+            <Link to={"/watch"}><FaRegPlayCircle size={28} /> </Link>
           </div>
         </div>
 
