@@ -10,6 +10,7 @@ export default {
         cherry: "#E43636",
         creamy: "#F6EFD2",
         khaki: "#E2DDB4",
+        primaryBg: "#d7d7d7"
         
       }
     },

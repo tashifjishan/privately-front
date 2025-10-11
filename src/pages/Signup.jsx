@@ -6,7 +6,7 @@ export default function Signup() {
 
         <form className="flex flex-col gap-4">
           <input
-            className="bg-transparent border-[1px] border-white focus:outline-indigo-500 py-2 px-4 w-72 border-[1px] rounded-lg"
+            className="bg-white border-[1px] border-white focus:outline-indigo-500 py-2 px-4 w-72 border-[1px] rounded-lg"
             type="text"
             name="name"
             placeholder="Full Name"
@@ -14,21 +14,21 @@ export default function Signup() {
 
 
           <input
-            className="bg-transparent border-[1px] border-white focus:outline-indigo-500 py-2 px-4 w-72 border-[1px] rounded-lg"
+            className="bg-white border-[1px] border-white focus:outline-indigo-500 py-2 px-4 w-72 border-[1px] rounded-lg"
             type="email"
             name="email"
             placeholder="Email Address"
           />
 
           <input
-            className="bg-transparent border-[1px] border-white focus:outline-indigo-500 py-2 px-4 w-72 border-[1px] rounded-lg"
+            className="bg-white border-[1px] border-white focus:outline-indigo-500 py-2 px-4 w-72 border-[1px] rounded-lg"
             type="email"
             name="email"
             placeholder="Phone"
           />
 
           <input
-            className="bg-transparent border-[1px] border-white focus:outline-indigo-500 py-2 px-4 w-72 border-[1px] rounded-lg"
+            className="bg-white border-[1px] border-white focus:outline-indigo-500 py-2 px-4 w-72 border-[1px] rounded-lg"
             type="password"
             name="password"
             placeholder="Password"
