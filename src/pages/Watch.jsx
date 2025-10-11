@@ -2,22 +2,23 @@ import { PiChats } from "react-icons/pi";
 import { CiVideoOff } from "react-icons/ci";
 import { BsEmojiWink, BsMicMute } from "react-icons/bs";
 import { IoIosAttach } from "react-icons/io";
-import { RiVoiceprintLine } from "react-icons/ri";
+import { RiArrowGoBackLine, RiVoiceprintLine } from "react-icons/ri";
 
 export default function Watch() {
   return (
     <div className="h-screen flex flex-col bg-[#f9fafb] text-gray-800">
       {/* Header */}
-      <div className="px-6 py-4 flex items-center justify-between border-b border-gray-200 bg-white">
+      <div className="px-6 py-2 flex items-center justify-between gap-3 border-b border-gray-200 bg-white">
+        <RiArrowGoBackLine size={24} className="text-gray-600" />
         <div className="flex items-center gap-4">
           <img
             className="w-10 h-10 rounded-full object-cover"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtAOGvsuCigTR-oRCUKfLFQJDcmAOxJfNXgQ&s"
             alt="User"
           />
-          <span className="text-lg font-medium">Watch Party</span>
+         
         </div>
-        <PiChats size={24} className="text-gray-600" />
+        
       </div>
 
       {/* Main Content */}
