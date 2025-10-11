@@ -44,7 +44,7 @@ export default function Watch() {
             ].map((person, index) => (
               <div key={index} className="text-center space-y-2">
                 <img
-                  className="w-40 h-56 rounded-md object-cover"
+                  className="h-24 w-36 lg:h-64 lg:w-48 rounded-md object-cover"
                   src={person.img}
                   alt="Participant"
                 />
@@ -96,5 +96,4 @@ export default function Watch() {
         </div>
       </div>
     </div>
-  );
-}
+  )}
