@@ -8,8 +8,10 @@ import { HiMagnifyingGlass } from "react-icons/hi2";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { useState } from "react";
 import { Link } from "react-router";
+import { IoSend } from "react-icons/io5";
 export default function Chats() {
     const [friendsSectionOpen, setFriendsSectionOpen] = useState(false);
+    const [sendBtnVisible, setSendBtnVisible] = useState(false)
   const friends = [
     {
       name: "MONIKA",
@@ -378,7 +380,22 @@ export default function Chats() {
           <div className="p-6 flex gap-2 items-center ">
             <BsEmojiWink size={24} />
             <IoIosAttach size={24} />
-            <input className="flex-1 p-2 focus:outline-none border-[1px] border-gray-200 rounded-xl" type="text" placeholder="Say something..." />
+              <div className="flex-1 flex items-center border border-gray-200 rounded-full px-4">
+                          <input
+                            className="flex-1 rounded-full px-3 py-2  focus:outline-none focus:outline-none text-sm"
+                            type="text"
+                            placeholder="Say something..."
+                            onChange={(e)=>{
+                                if(e.target.value.trim().length>0){
+                                    setSendBtnVisible(true);
+                                }else{
+                                    setSendBtnVisible(false);
+                                }
+                            }}
+                          />
+            
+                          {sendBtnVisible && <IoSend size={20} />}
+                        </div>
             <RiVoiceprintLine size={24} />
           </div>
         </div>
