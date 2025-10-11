@@ -85,20 +85,20 @@ export default function Watch() {
           </div>
 
           {/* Chat Input */}
-          <div className="border-t border-gray-200 px-4 py-3 flex items-center gap-3">
+          <div className="border-t border-gray-200 px-4 py-2 grid grid-cols-[20px_20px_auto_20px] items-center gap-2">
             <BsEmojiWink size={22} className="text-gray-500 cursor-pointer" />
             <IoIosAttach size={22} className="text-gray-500 cursor-pointer" />
-            <div className="flex-1 flex items-center border border-gray-200 rounded-full">
+          <div className=" grid grid-cols-[1fr_10px] items-center border border-gray-200 rounded-full px-4 ">
               <input
-                className="rounded-full px-3 py-2  focus:outline-none focus:outline-none text-sm"
+                className=" rounded-full  py-2  focus:outline-none focus:outline-none text-sm"
                 type="text"
                 placeholder="Say something..."
-                onChange={(e)=>{
-                    if(e.target.value.trim().length>0){
-                        setSendBtnVisible(true);
-                    }else{
-                        setSendBtnVisible(false);
-                    }
+                onChange={(e) => {
+                  if (e.target.value.trim().length > 0) {
+                    setSendBtnVisible(true);
+                  } else {
+                    setSendBtnVisible(false);
+                  }
                 }}
               />
 

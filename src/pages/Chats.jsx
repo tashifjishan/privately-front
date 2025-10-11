@@ -10,8 +10,8 @@ import { useState } from "react";
 import { Link } from "react-router";
 import { IoSend } from "react-icons/io5";
 export default function Chats() {
-    const [friendsSectionOpen, setFriendsSectionOpen] = useState(false);
-    const [sendBtnVisible, setSendBtnVisible] = useState(false)
+  const [friendsSectionOpen, setFriendsSectionOpen] = useState(false);
+  const [sendBtnVisible, setSendBtnVisible] = useState(false);
   const friends = [
     {
       name: "MONIKA",
@@ -294,17 +294,19 @@ export default function Chats() {
 
   return (
     <div className="grid lg:grid-cols-[400px_auto] h-screen overflow-hidden">
-        
-      <div className={`duration-500 bg-primaryBg fixed lg:static ${friendsSectionOpen ? "left-0": "-left-[400px]"} lg:flex flex-col gap-6 h-screen overflow-auto scrollbar-hide `}>
+      <div
+        className={`duration-500 bg-primaryBg fixed lg:static ${
+          friendsSectionOpen ? "left-0" : "-left-[400px]"
+        } lg:flex flex-col gap-6 h-screen overflow-auto scrollbar-hide `}
+      >
         <div className="flex flex-col gap-6 sticky top-0 bg-inherit z-50 p-4 pb-0">
           <div className="flex items-center  flex justify-between ">
-            
             <img
               className="w-12 h-12 object-cover rounded-full"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtAOGvsuCigTR-oRCUKfLFQJDcmAOxJfNXgQ&s"
               alt=""
             />
-            <CiMenuKebab  size={24} className="cursor-pointer" />
+            <CiMenuKebab size={24} className="cursor-pointer" />
           </div>
 
           <div className="flex items-center rounded-2xl p-2 bg-white flex gap-4 pl-6 border-2 border-gray-200">
@@ -343,12 +345,19 @@ export default function Chats() {
 
       {/* Inbox */}
 
-      <div className="flex flex-col h-screen" onClick={()=>setFriendsSectionOpen(false)}>
+      <div
+        className="flex flex-col h-screen"
+        onClick={() => setFriendsSectionOpen(false)}
+      >
         <div className="p-4  flex gap-2 items-center border-b-[1px]">
-            <FaBarsStaggered className="lg:hidden cursor-pointer hover:text-primaryBg" onClick={(e)=>{
-                e.stopPropagation();
-                setFriendsSectionOpen(true)
-            }} size={24} />
+          <FaBarsStaggered
+            className="lg:hidden cursor-pointer hover:text-primaryBg"
+            onClick={(e) => {
+              e.stopPropagation();
+              setFriendsSectionOpen(true);
+            }}
+            size={24}
+          />
           <img
             className="w-12 rounded-full"
             src="https://randomuser.me/api/portraits/men/54.jpg"
@@ -365,37 +374,47 @@ export default function Chats() {
           <div className="ml-auto flex gap-2 items-center ">
             <CiVideoOn size={30} />
             <CiPhone size={30} />
-            <Link to={"/watch"}><FaRegPlayCircle size={28} /> </Link>
+            <Link to={"/watch"}>
+              <FaRegPlayCircle size={28} />{" "}
+            </Link>
           </div>
         </div>
 
         {/* Message Section */}
         <div className="flex-1  flex flex-col">
-            <div className="flex-1 p-6 flex flex-col gap-2 px-12  justify-end">
-                <p className="rounded-xl px-4 py-2 bg-[#eae6f6] w-fit max-w-96">Hi!</p>
-                <p className="rounded-xl px-4 py-2 bg-gray-100 w-fit ml-auto max-w-96">Hello!</p>
-                <p className="rounded-xl px-4 py-2 bg-gray-100 w-fit ml-auto max-w-96 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dolorem repellat rem laborum obcaecati a dolore iure aut deserunt cum molestiae suscipit dicta fugit quis officia, velit numquam? Possimus, animi?</p>
-
-            </div>
+          <div className="flex-1 p-6 flex flex-col gap-2 px-12  justify-end">
+            <p className="rounded-xl px-4 py-2 bg-[#eae6f6] w-fit max-w-96">
+              Hi!
+            </p>
+            <p className="rounded-xl px-4 py-2 bg-gray-100 w-fit ml-auto max-w-96">
+              Hello!
+            </p>
+            <p className="rounded-xl px-4 py-2 bg-gray-100 w-fit ml-auto max-w-96 ">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              dolorem repellat rem laborum obcaecati a dolore iure aut deserunt
+              cum molestiae suscipit dicta fugit quis officia, velit numquam?
+              Possimus, animi?
+            </p>
+          </div>
           <div className="p-6 flex gap-2 items-center ">
             <BsEmojiWink size={24} />
             <IoIosAttach size={24} />
-              <div className="flex-1 flex items-center border border-gray-200 rounded-full px-4">
-                          <input
-                            className="flex-1 rounded-full px-3 py-2  focus:outline-none focus:outline-none text-sm"
-                            type="text"
-                            placeholder="Say something..."
-                            onChange={(e)=>{
-                                if(e.target.value.trim().length>0){
-                                    setSendBtnVisible(true);
-                                }else{
-                                    setSendBtnVisible(false);
-                                }
-                            }}
-                          />
-            
-                          {sendBtnVisible && <IoSend size={20} />}
-                        </div>
+            <div className="flex-1 grid grid-cols-[1fr_20px] items-center border border-gray-200 rounded-full px-4 ">
+              <input
+                className=" rounded-full  py-2  focus:outline-none focus:outline-none text-sm"
+                type="text"
+                placeholder="Say something..."
+                onChange={(e) => {
+                  if (e.target.value.trim().length > 0) {
+                    setSendBtnVisible(true);
+                  } else {
+                    setSendBtnVisible(false);
+                  }
+                }}
+              />
+
+              {sendBtnVisible && <IoSend size={20} />}
+            </div>
             <RiVoiceprintLine size={24} />
           </div>
         </div>
@@ -403,5 +422,3 @@ export default function Chats() {
     </div>
   );
 }
-
-
