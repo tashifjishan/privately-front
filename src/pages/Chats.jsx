@@ -1,14 +1,21 @@
 import { CiMenuKebab, CiPhone, CiVideoOn, CiVoicemail } from "react-icons/ci";
 import { BsEmojiWink } from "react-icons/bs";
 import { IoIosAttach } from "react-icons/io";
-import { RiVoiceprintLine } from "react-icons/ri";
-import { FaRegPlayCircle } from "react-icons/fa";
-import { HiMagnifyingGlass } from "react-icons/hi2";
+import {
+  RiHome3Fill,
+  RiMessage3Fill,
+  RiVideoAddLine,
+  RiVoiceprintLine,
+} from "react-icons/ri";
+import { FaMask, FaRegPlayCircle } from "react-icons/fa";
+import { HiEnvelope, HiHome, HiMagnifyingGlass } from "react-icons/hi2";
+import { MdLocalMovies } from "react-icons/md";
 
 import { FaBarsStaggered } from "react-icons/fa6";
 import { useState } from "react";
 import { Link } from "react-router";
 import { IoSend } from "react-icons/io5";
+import Nav from "../components/Nav";
 export default function Chats() {
   const [friendsSectionOpen, setFriendsSectionOpen] = useState(false);
   const [sendBtnVisible, setSendBtnVisible] = useState(false);
@@ -293,10 +300,11 @@ export default function Chats() {
   ];
 
   return (
-    <div className="grid lg:grid-cols-[400px_auto] h-screen overflow-hidden">
+    <div className="grid grid-cols-[50px_1fr] lg:grid-cols-[auto_400px_1fr] h-screen overflow-hidden">
+      <Nav />
       <div
-        className={`duration-500 bg-primaryBg fixed lg:static ${
-          friendsSectionOpen ? "left-0" : "-left-[400px]"
+        className={`duration-500 bg-slate-900 fixed lg:static ${
+          friendsSectionOpen ? "left-[50px]" : "-left-[450px]"
         } lg:flex flex-col gap-6 h-screen overflow-auto scrollbar-hide `}
       >
         <div className="flex flex-col gap-6 sticky top-0 bg-inherit z-50 p-4 pb-0">
@@ -331,7 +339,7 @@ export default function Chats() {
                 />
               </div>
               <div>
-                <p>{friend.name}</p>
+                <p className="text-white">{friend.name}</p>
                 <p className="text-gray-500">{friend.lastMessage}</p>
               </div>
 
@@ -374,9 +382,6 @@ export default function Chats() {
           <div className="ml-auto flex gap-2 items-center ">
             <CiVideoOn size={30} />
             <CiPhone size={30} />
-            <Link to={"/watch"}>
-              <FaRegPlayCircle size={28} />{" "}
-            </Link>
           </div>
         </div>
 

@@ -6,24 +6,14 @@ import { RiArrowGoBackLine, RiVoiceprintLine } from "react-icons/ri";
 import { Link } from "react-router";
 import { IoSend } from "react-icons/io5";
 import { useState } from "react";
+import Nav from "../components/Nav";
 
 export default function Watch() {
     const [sendBtnVisible, setSendBtnVisible] = useState(false);
   return (
-    <div className=" flex flex-col bg-[#f9fafb] text-gray-800 h-screen">
+    <div className="grid grid-cols-[auto_1fr] flex flex-col bg-[#f9fafb] text-gray-800 h-screen">
       {/* Header */}
-      <div className="px-6 py-2 flex items-center justify-between gap-3 border-b border-gray-200 bg-white">
-        <Link to={"../"}>
-          <RiArrowGoBackLine size={24} className="text-gray-600" />
-        </Link>
-        <div className="flex items-center gap-4">
-          <img
-            className="w-10 h-10 rounded-full object-cover"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtAOGvsuCigTR-oRCUKfLFQJDcmAOxJfNXgQ&s"
-            alt="User"
-          />
-        </div>
-      </div>
+      <Nav />
 
       {/* Main Content */}
       <div className="flex-1  grid lg:grid-cols-[3fr_1fr] grid-cols-1 gap-6 p-2 lg:p-6 ">
@@ -49,80 +39,7 @@ export default function Watch() {
               {
                 img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
               },
-              {
-                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
-              },
-              {
-                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
-              },
-
-              {
-                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
-              },
-              {
-                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
-              },
-                {
-                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
-              }
-              ,
-                {
-                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
-              }
-              ,
-                {
-                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
-              },
-              {
-                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
-              },
-
-              {
-                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
-              },
-              {
-                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
-              },,
-              {
-                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
-              },
-
-              {
-                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
-              },
-              {
-                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
-              },,
-              {
-                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
-              },
-
-              {
-                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
-              },
-              {
-                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
-              },,
-              {
-                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
-              },
-
-              {
-                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
-              },
-              {
-                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
-              },,
-              {
-                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
-              },
-
-              {
-                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
-              },
-              {
-                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
-              },
+          
             ].map((person, index) => (
               <div key={index} className="text-center space-y-2 ">
                 <img
