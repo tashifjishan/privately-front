@@ -10,7 +10,7 @@ import { useState } from "react";
 export default function Watch() {
     const [sendBtnVisible, setSendBtnVisible] = useState(false);
   return (
-    <div className="h-screen flex flex-col bg-[#f9fafb] text-gray-800">
+    <div className=" flex flex-col bg-[#f9fafb] text-gray-800 h-screen">
       {/* Header */}
       <div className="px-6 py-2 flex items-center justify-between gap-3 border-b border-gray-200 bg-white">
         <Link to={"../"}>
@@ -26,19 +26,19 @@ export default function Watch() {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 grid lg:grid-cols-[2fr_1fr] grid-cols-1 gap-6 p-2 lg:p-6 overflow-hidden">
+      <div className="flex-1  grid lg:grid-cols-[3fr_1fr] grid-cols-1 gap-6 p-2 lg:p-6 ">
         {/* Left: Video + Participants */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-2 overflow-hidden justify-between">
           <video
             src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
-            className="w-full h-64 sm:h-80 md:h-[400px] rounded-md bg-black"
+            className="w-full h-64 sm:h-80 md:h-3/4 rounded-md bg-black"
             controls
             autoPlay
             muted
           ></video>
 
           {/* Participants */}
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex  justify-center gap-6  overflow-auto ">
             {[
               {
                 img: "https://media.tenor.com/fk5PaQdZatMAAAAM/on-the-phone-phone.gif",
@@ -46,10 +46,87 @@ export default function Watch() {
               {
                 img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
               },
+              {
+                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
+              },
+              {
+                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
+              },
+              {
+                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
+              },
+
+              {
+                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
+              },
+              {
+                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
+              },
+                {
+                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
+              }
+              ,
+                {
+                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
+              }
+              ,
+                {
+                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
+              },
+              {
+                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
+              },
+
+              {
+                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
+              },
+              {
+                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
+              },,
+              {
+                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
+              },
+
+              {
+                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
+              },
+              {
+                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
+              },,
+              {
+                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
+              },
+
+              {
+                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
+              },
+              {
+                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
+              },,
+              {
+                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
+              },
+
+              {
+                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
+              },
+              {
+                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
+              },,
+              {
+                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
+              },
+
+              {
+                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
+              },
+              {
+                img: "https://media.tenor.com/e2H9ESW2-MwAAAAM/watching-popcorn.gif",
+              },
             ].map((person, index) => (
-              <div key={index} className="text-center space-y-2">
+              <div key={index} className="text-center space-y-2 ">
                 <img
-                  className="h-24 w-36 lg:h-64 lg:w-48 rounded-md object-cover"
+                  className="h-24 w-36 lg:h-24 lg:w-24  rounded-md object-cover"
                   src={person.img}
                   alt="Participant"
                 />
